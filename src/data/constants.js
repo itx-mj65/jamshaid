@@ -282,7 +282,7 @@ export const projects = [
     image:
       "https://res.cloudinary.com/dutqyxxou/image/upload/v1737826455/Screenshot_2025-01-25_223334_sjkk6l.png",
     tags: [ "PHP", "MYSQL", "Javascript", "CSS", "HTML","Wordpress", "others"],
-    category: "android app",
+    category: "web app",
     webapp: "https://cravycrunch.co.uk",
   },
  
