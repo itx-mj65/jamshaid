@@ -128,7 +128,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
     role: "Fullstack Developer Intern",
     company: "Tech HUb Innovations",
     date: "Feb 2024 - Dec 2024",
@@ -147,7 +147,7 @@ export const experiences = [
   },
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/neurobit.jpeg?alt=media&token=1cacbb7b-e5ea-4efb-9b3d-f5a31b9564ad",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
     role: "Full Stack Dev Intern",
     company: "Tech Hub Innovation , Faisalabad",
     date: "June 2023 - Present",
@@ -167,10 +167,10 @@ export const experiences = [
   
   {
     id: 3,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/gdsc.jpeg?alt=media&token=c162329c-efaa-4be8-a173-8d3f4c48ea70",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797428/hypernexis_aritxa.jpg",
     role: "Mern Stack Developer",
     company: "Hypernexis",
-    date: "Nov2021 - Present",
+    date: "Mar 2024 - Present",
     desc: "As an Android developer at the Google Developers Student Club (GDCS), I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. Through my involvement with GDCS, I have also had the opportunity to host and participate in numerous events, including hackathons, study jams, and workshops.",
     skills: [
       "ReactJS",
@@ -189,7 +189,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797120/riphah_nuea62.png",
     school: "Riphah International University, Faisalabad",
     date: "Oct 2023 - Sep 2027",
     grade: "3.31 CGPA",
@@ -198,7 +198,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737796866/alfalah_qyzmrm.jpg",
     school: "Alfalah Group of colleges, Juhmrah",
     date: "Apr 2021 - Apr 2023",
     grade: "70%",
@@ -207,7 +207,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797060/carrier_y0lsoh.jpg",
     school: "Carrier Institute of Technology, Faisalabad",
     date: "Apr 2022- Jan 2023",
     grade: "A+",
