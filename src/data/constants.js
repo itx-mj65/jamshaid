@@ -129,10 +129,10 @@ export const experiences = [
   {
     id: 0,
     img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
-    role: "Fullstack Developer Intern",
+    role: "Fullstack Developer | Mern Stack",
     company: "Tech HUb Innovations",
     date: "Feb 2024 - Dec 2024",
-    desc: "Working on Flipr Platforms, developing and managing full-stack web applications using the MERN stack, and optimizing workflows with efficient automation processes.",
+    desc: "Working at Tech Hub Innovation, developing and managing scalable full-stack web applications using the MERN stack, while streamlining processes and enhancing efficiency through innovative solutions.",
     skills: [
       "React Js",
       "Redux",
@@ -143,6 +143,7 @@ export const experiences = [
       "Express Js",
       "MongoDB"
     ],
+    doc:"https://res.cloudinary.com/dutqyxxou/image/upload/v1737822513/WhatsApp_Image_2025-01-25_at_21.13.34_9f9eee0c_melne4.jpg"
    
   },
   {
@@ -151,7 +152,7 @@ export const experiences = [
     role: "Full Stack Dev Intern",
     company: "Tech Hub Innovation , Faisalabad",
     date: "June 2023 - Present",
-    desc: "Working on the frontend of the web application using ReactJS, Redux, and Material UI.",
+    desc: "Developing full-stack web applications using the MERN stack, with a focus on frontend development using ReactJS and Redux for building dynamic and responsive user interfaces.",
     skills: [
       "ReactJS",
       "Redux",
@@ -162,7 +163,7 @@ export const experiences = [
       "Wordpress",
       "JavaScript",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
+    doc: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737821801/WhatsApp_Image_2025-01-25_at_21.13.32_84865719_xzxmkk.jpg",
   },
   
   {
@@ -171,7 +172,7 @@ export const experiences = [
     role: "Mern Stack Developer",
     company: "Hypernexis",
     date: "Mar 2024 - Present",
-    desc: "As an Android developer at the Google Developers Student Club (GDCS), I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. Through my involvement with GDCS, I have also had the opportunity to host and participate in numerous events, including hackathons, study jams, and workshops.",
+    desc: "As a MERN stack and WordPress developer at HyperNexis, I have had the opportunity to work on exciting web development projects and collaborate with talented developers who share my passion for technology. During my time at HyperNexis, I have also had the privilege of contributing to various initiatives, including hosting and participating in hackathons, study sessions, and workshops, fostering innovation and continuous learning in the field of web development.",
     skills: [
       "ReactJS",
       "Redux",
@@ -193,7 +194,7 @@ export const education = [
     school: "Riphah International University, Faisalabad",
     date: "Oct 2023 - Sep 2027",
     grade: "3.31 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
+    desc: "I am pursuing a Bachelor's degree in Computer Science at Riphah International University, Faisalabad, with a CGPA of 3.31 after completing 4 semesters. I have studied courses like Data Structures, Algorithms, OOP, Database Management, Operating Systems, and Computer Networks. As a member of the Google Developers Student Club (GDSC) at Riphah, I collaborate with talented developers and work on exciting projects.",
     degree: "Bachelor of Computer Sciences",
   },
   {
@@ -202,7 +203,7 @@ export const education = [
     school: "Alfalah Group of colleges, Juhmrah",
     date: "Apr 2021 - Apr 2023",
     grade: "70%",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    desc: "I completed my Class 12 education at Alfalah Group of Colleges, Jhumrah, with a focus on Pre-Medical studies.",
     degree: "FSC (Pre Medical)",
   },
   {
@@ -211,7 +212,7 @@ export const education = [
     school: "Carrier Institute of Technology, Faisalabad",
     date: "Apr 2022- Jan 2023",
     grade: "A+",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    desc: "I completed a Web Development course at Carrier Institute of Technology, Faisalabad, where I gained hands-on experience in front-end and back-end development, covering technologies like HTML, CSS, JavaScript, and more.",
     degree: "Web Development",
   },
 ];
