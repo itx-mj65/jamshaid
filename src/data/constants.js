@@ -4,7 +4,7 @@ export const Bio = {
   description:
     "I am a dedicated and adaptable professional passionate about learning and growth. I thrive on challenges, delivering high-quality results, and creating impactful solutions with a focus on innovation and continuous improvement.",
   github: "https://github.com/itx-mj65",
-  resume: "#",
+  resume: "https://github.com/itx-mj65/Resume/blob/main/m%20jamshaid%20ins%20(2).pdf",
   linkedin: "https://www.linkedin.com/in/m-jamshaid-48178828b/",
   twitter: "#",
   insta: "https://www.instagram.com/jamshaidweb/?igsh=MWt2a2ZsaW4wcnEyeA%3D%3D",
@@ -21,7 +21,7 @@ export const skills = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
-        name: "Redux",
+        name: "Redux Toolkit",
         image:
           "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
       },
@@ -48,6 +48,11 @@ export const skills = [
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+      },
+      {
+        name: "Tailwind Css",
+        image:
+          "https://res.cloudinary.com/dutqyxxou/image/upload/v1752921168/tailwind_logo-removebg-preview_dykxzn.png",
       },
     ],
   },
@@ -119,9 +124,27 @@ export const experiences = [
   {
     id: 0,
     img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
+    role: "Web Dev Instructor ",
+    company: "NAVTTC /Tech Hub Innovation , Faisalabad",
+    date: "Mar 2025 - May 2025",
+    desc: "Delivering hands-on training in full-stack web application development using the MERN stack, with a strong emphasis on frontend development through ReactJS and Redux. Focused on equipping students with the skills to build dynamic, responsive user interfaces and real-world projects, in line with NAVTTC’s outcome-based training standards.",
+    skills: [
+      "ReactJS",
+      "Redux Toolkit",
+      "NodeJs",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    doc: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737821801/WhatsApp_Image_2025-01-25_at_21.13.32_84865719_xzxmkk.jpg",
+  },
+  {
+    id: 1,
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
     role: "Fullstack Developer | Mern Stack",
     company: "Tech HUb Innovations",
-    date: "Feb 2024 - Dec 2024",
+    date: "Feb 2024 - Jan 2025",
     desc: "Working at Tech Hub Innovation, developing and managing scalable full-stack web applications using the MERN stack, while streamlining processes and enhancing efficiency through innovative solutions.",
     skills: [
       "React Js",
@@ -135,28 +158,9 @@ export const experiences = [
     ],
     doc: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737822513/WhatsApp_Image_2025-01-25_at_21.13.34_9f9eee0c_melne4.jpg",
   },
-  {
-    id: 0,
-    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
-    role: "Full Stack Dev Intern",
-    company: "Tech Hub Innovation , Faisalabad",
-    date: "June 2023 - Present",
-    desc: "Developing full-stack web applications using the MERN stack, with a focus on frontend development using ReactJS and Redux for building dynamic and responsive user interfaces.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "NodeJs",
-      "MongoDB",
-      "HTML",
-      "CSS",
-      "Wordpress",
-      "JavaScript",
-    ],
-    doc: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737821801/WhatsApp_Image_2025-01-25_at_21.13.32_84865719_xzxmkk.jpg",
-  },
 
   {
-    id: 3,
+    id: 2,
     img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797428/hypernexis_aritxa.jpg",
     role: "Mern Stack Developer",
     company: "Hypernexis",
@@ -172,6 +176,25 @@ export const experiences = [
       "Wordpress",
       "JavaScript",
     ],
+  },
+  {
+    id: 3,
+    img: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737797259/texh_hub_gvf92y.jpg",
+    role: "Full Stack Dev Intern",
+    company: "Tech Hub Innovation , Faisalabad",
+    date: "Sep 2023 - Jan 2024",
+    desc: "Developing full-stack web applications using the MERN stack, with a focus on frontend development using ReactJS and Redux for building dynamic and responsive user interfaces.",
+    skills: [
+      "ReactJS",
+      "Redux",
+      "NodeJs",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "Wordpress",
+      "JavaScript",
+    ],
+    doc: "https://res.cloudinary.com/dutqyxxou/image/upload/v1737821801/WhatsApp_Image_2025-01-25_at_21.13.32_84865719_xzxmkk.jpg",
   },
 ];
 
@@ -207,7 +230,24 @@ export const education = [
 
 export const projects = [
   {
-    id: 9,
+    id: 0,
+    title: "Mind Drape",
+    date: "Jul 2025 - Jul 2025",
+    description: `Mind Drape is a creative blogging platform dedicated to self-expression, digital storytelling, and insightful conversations. Designed with a focus on clean aesthetics and thoughtful content, Mind Drape empowers writers, thinkers, and creatives to share their perspectives on a wide range of topics — from personal development and tech insights to lifestyle and creative writing.
+
+The platform blends modern web technologies with a minimalist design approach to ensure a seamless and engaging reading experience. Through its smart logo design, intuitive UI, and content-rich layout, Mind Drape reflects a perfect balance between creativity and usability.
+
+Mind Drape is not just a blog — it's a digital canvas for voices that matter.
+For more information, visit Mind Drape`,
+    image:
+      "https://res.cloudinary.com/dutqyxxou/image/upload/v1752921705/Screenshot_2025-07-18_131953_jp3syh.png",
+    tags: ["Nodejs", "MongoDB", "ReactJs", "ExpressJs", "ShadCn UI", "Javascript", "CSS", "HTML"],
+    category: "web app",
+    github: "https://github.com/itx-mj65/blogging",
+    webapp: "https://mind-drape-mj.vercel.app/",
+  },
+  {
+    id: 1,
     title: "LIDC",
     date: "Jun 2024 - Feb 2024",
     description: `Layallpur Institute of Digital Computing (LIDC) is a renowned educational institution based in Faisalabad, specializing in digital computing and modern IT education. It offers comprehensive programs in software development, web technologies, and digital marketing, equipping students with practical skills for the evolving tech industry. LIDC is committed to fostering innovation, providing hands-on training, and producing industry-ready professionals. For more information, visit [LIDC](https://lidc.com.pk/).`,
@@ -219,7 +259,7 @@ export const projects = [
     webapp: "https://lidc.com.pk",
   },
   {
-    id: 0,
+    id: 2,
     title: "Tech Hub Systems",
     date: "Apr 2024 - May 2024",
     description:
@@ -245,7 +285,7 @@ export const projects = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     title: "Jakba",
     date: " Sep 2024 - Oct 2024",
     description:
@@ -260,39 +300,39 @@ export const projects = [
     webapp: "https://jakba-smoky.vercel.app/",
   },
   {
-    id: 2,
+    id: 4,
     title: "Digital Marketing Platform",
     date: "Mar 2024 - Apr 2024",
     description:
       "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
     image:
       "https://res.cloudinary.com/dutqyxxou/image/upload/v1737825972/Screenshot_2025-01-25_222549_uo48dx.png",
-    tags: [ "PHP", "MYSQL", "Javascript", "CSS", "HTML", "others"],
+    tags: ["PHP", "MYSQL", "Javascript", "CSS", "HTML", "others"],
     category: "web app",
     github: "",
     webapp: "https://digital-marketing-kohl-sigma.vercel.app/",
-    
+
   },
   {
-    id: 3,
+    id: 5,
     title: "Cravy Crunch",
     date: "Dec 2021 - Apr 2022",
     description:
       "Designed and developed a WordPress website for Cravy Crunch, a UK-based fast-food restaurant. The site includes an interactive menu, online ordering functionality, and a contact section, offering an engaging and seamless experience for customers. Fully optimized for performance, responsiveness, and accessibility across all devices.",
     image:
       "https://res.cloudinary.com/dutqyxxou/image/upload/v1737826455/Screenshot_2025-01-25_223334_sjkk6l.png",
-    tags: [ "PHP", "MYSQL", "Javascript", "CSS", "HTML","Wordpress", "others"],
+    tags: ["PHP", "MYSQL", "Javascript", "CSS", "HTML", "Wordpress", "others"],
     category: "web app",
     webapp: "https://cravycrunch.co.uk",
   },
- 
- 
+
+
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
+  { year: 2023, text: "Started my journey" },
+  { year: 2023, text: "Worked as a freelance developer" },
+  { year: 2024, text: "Founded JavaScript Mastery" },
+  { year: 2025, text: "Shared my projects with the world" },
+
 ];
