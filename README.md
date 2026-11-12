@@ -1,55 +1,92 @@
-# My Portfolio
-Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
+# M Jamshaid - Portfolio
 
-### Weblink: [Live Website](https://jamshaid-mu.vercel.app/)
-## Some Images:
-<img width="450px;" src="https://res.cloudinary.com/dutqyxxou/image/upload/v1737791861/Screenshot_2025-01-25_125317_jz2a7k.png"/>
-<img width="450px;" src="https://res.cloudinary.com/dutqyxxou/image/upload/v1737793529/Screenshot_2025-01-25_132518_viogjw.png"/>
+Personal portfolio of **M Jamshaid**, a web developer working with the MERN stack, Next.js, React.js and WordPress. It presents my skills, work experience, education and the websites, portals and web apps I have built.
 
+### Live website: [jamshaid-mu.vercel.app](https://jamshaid-mu.vercel.app/)
+
+## Screenshots
+
+<img width="49%" alt="Hero section" src="docs/screenshots/hero.jpg" /> <img width="49%" alt="Skills section" src="docs/screenshots/skills.jpg" />
+<img width="49%" alt="Experience section" src="docs/screenshots/experience.jpg" /> <img width="49%" alt="Projects section" src="docs/screenshots/projects.jpg" />
 
 ## Table of Contents
-- [Introduction](#introduction)
 - [Features](#features)
+- [Projects Shown](#projects-shown)
 - [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-My Portfolio is a React.js application that serves as an online portfolio to showcase my work, skills, and achievements. It provides an overview of my background, displays my projects, and offers a way to contact me.
+- [Updating Content](#updating-content)
+- [Deployment](#deployment)
+- [Contact](#contact)
 
 ## Features
-- About Me: An overview of my background, skills, and experiences.
-- Projects: A collection of my notable projects with descriptions, screenshots, and links.
-- Skills: A list of my technical skills and proficiencies.
-- Resume: A link to download my resume.
-- Contact: A form to send me messages or inquiries.
+- **Hero:** introduction with a cutout portrait that tilts gently with the cursor, rotating role titles, and water-ripple rings that follow the mouse.
+- **Skills:** a moving skills strip and grouped skill cards with brand icons that ship with the site.
+- **Experience:** a timeline that fills as you scroll, with company logos, responsibilities and skill tags.
+- **Projects:** project cards with framed mockup covers. Each card opens a popup with the full description, a screenshot gallery and the live link.
+- **Education:** degree and training cards.
+- **Resume:** the "Check Resume" button opens my resume as a PDF.
+- **Contact:** a working contact form powered by EmailJS.
+- **Responsive and light:** works on phones, tablets and desktops, with no heavy blur effects or 3D engine.
+
+## Projects Shown
+- Medbilling RCM - marketing website
+- Medbilling EMS - employee management system
+- EnrollMD - medical credentialing website and CMS
+- Enroll MD Portal - provider credentialing and enrollment platform
+- Billdontix - dental billing website with lead inbox and blog CMS
+- SimpleScheduleMD - multi-doctor appointment scheduling and patient portal
+- LeadTrack RCM - lead tracking CRM
+- Choice Home Health - animated single-page marketing website
+- Mind Drape, LIDC, Tech Hub Systems, Jakba, Digital Marketing Platform and Cravy Crunch
 
 ## Technologies Used
-- React.js: A JavaScript library for building user interfaces.
-- HTML5 & CSS3: Markup and styling languages for building web pages.
-- JavaScript: A programming language for adding interactivity to web applications.
-- Style-Components: A CSS framework for creating responsive and mobile-first designs.
-- Git: A version control system for tracking changes and collaborating on projects.
-- GitHub Pages: A platform for hosting and deploying web applications.
+- **React 18** (Create React App) - user interface
+- **styled-components** - styling and theming
+- **Framer Motion** - scroll reveals and transitions
+- **react-icons** - interface and brand icons
+- **Material UI** - project popup and notifications
+- **EmailJS** - contact form delivery
+- **typewriter-effect** - rotating role titles
+- **Vercel** - hosting, with automatic deploys from the `main` branch
+
+## Project Structure
+```
+public/
+  projects/      project mockup images
+  logos/         company logos
+  M-Jamshaid-Resume.pdf
+src/
+  data/constants.js     all content: bio, skills, experience, education, projects
+  components/           Navbar, HeroSection, Skills, Experience, Projects,
+                        ProjectDetails, Education, Contact, Footer, Effects, ui
+  utils/Themes.js       colours and gradients
+```
 
 ## Installation
-To run this portfolio locally, follow these steps:
+To run this portfolio locally:
 
 1. Install the dependencies: `npm install`
 2. Start the development server: `npm start`
 3. Open your browser and visit: `http://localhost:3000`
 
-## Usage
-After installing and running the project locally, you can navigate through the different sections of the portfolio using the navigation menu. Explore the About Me section to learn more about my background and skills. Visit the Projects section to see detailed information about my projects, including descriptions and screenshots. Use the Contact section to send me a message or inquiry.
+To create a production build: `npm run build`
 
-## Contributing
-Contributions are welcome! If you'd like to contribute to My Portfolio, please follow these steps:
+## Updating Content
+All text and links live in `src/data/constants.js`:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b my-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-feature`
-5. Open a pull request.
+- `Bio` - name, role titles, introduction, resume and social links
+- `skills` - skill groups shown in the Skills section
+- `experiences` - jobs shown on the timeline
+- `education` - degrees and courses
+- `projects` - project cards, descriptions, galleries and live links
 
+Project images go in `public/projects/` and company logos in `public/logos/`.
+
+## Deployment
+The site is hosted on Vercel. Every push to the `main` branch is built and deployed automatically.
+
+## Contact
+- GitHub: [itx-mj65](https://github.com/itx-mj65)
+- LinkedIn: [m-jamshaid-48178828b](https://www.linkedin.com/in/m-jamshaid-48178828b/)
+- Or use the contact form on the [live website](https://jamshaid-mu.vercel.app/#contact)
