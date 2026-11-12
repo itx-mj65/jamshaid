@@ -1,113 +1,112 @@
+import React from 'react';
 import styled from 'styled-components';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
 import { Bio } from '../../data/constants';
+import { spawnRipple } from '../ui';
 
-const FooterContainer = styled.div`
-  width: 100%;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
-  //background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%);
+const Wrap = styled.footer`
+  position: relative;
+  z-index: 1;
+  margin-top: 110px;
+  border-top: 1px solid ${({ theme }) => theme.border};
+  background: rgba(255, 255, 255, 0.02);
 `;
 
-
-const FooterWrapper = styled.footer`
-  width: 100%;
+const Inner = styled.div`
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 44px 24px 30px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
   align-items: center;
-  padding: 1rem;
-  color: ${({ theme }) => theme.text_primary};
+  gap: 22px;
 `;
 
-const Logo = styled.h1`
-  font-weight: 600;
-  font-size: 20px;
-  color: ${({ theme }) => theme.primary};
+const Big = styled.div`
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(40px, 9vw, 110px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.04));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
 `;
 
 const Nav = styled.nav`
-  width: 100%;
-  max-width: 800px;
-  margin-top: 0.5rem;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
+  gap: 8px 26px;
+  a {
+    font-size: 15px;
+    text-decoration: none;
+    color: ${({ theme }) => theme.text_secondary};
+    transition: color 0.2s;
+    &:hover { color: ${({ theme }) => theme.accent}; }
   }
 `;
 
-const NavLink = styled.a`
-color: ${({ theme }) => theme.text_primary};
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-const SocialMediaIcons = styled.div`
+const Icons = styled.div`
   display: flex;
-  margin-top: 1rem;
+  gap: 12px;
 `;
 
-const SocialMediaIcon = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
+const Icon = styled.a`
+  position: relative;
+  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
   color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
+  background: ${({ theme }) => theme.surface};
+  border: 1px solid ${({ theme }) => theme.border};
+  transition: transform 0.25s, color 0.25s, border-color 0.25s;
+  &:hover { transform: translateY(-3px); color: ${({ theme }) => theme.accent}; border-color: ${({ theme }) => theme.accent}; }
 `;
 
-const Copyright = styled.p`
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: ${({ theme }) => theme.soft2};
-  text-align: center;
+const Copy = styled.p`
+  font-size: 13.5px;
+  color: ${({ theme }) => theme.text_secondary};
 `;
+
+const isLink = (url) => url && url !== '#';
 
 function Footer() {
+  const socials = [
+    [Bio.github, FiGithub, 'GitHub'],
+    [Bio.linkedin, FiLinkedin, 'LinkedIn'],
+    [Bio.insta, FiInstagram, 'Instagram'],
+    [Bio.facebook, FiFacebook, 'Facebook'],
+    [Bio.twitter, FiTwitter, 'Twitter'],
+  ].filter(([url]) => isLink(url));
   return (
-    <FooterContainer>
-      <FooterWrapper>
-        <Logo>M Jamshaid</Logo>
+    <Wrap>
+      <Inner>
+        <Big>{Bio.name}</Big>
         <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </Nav>
-        <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
-        </SocialMediaIcons>
-        <Copyright>
-          &copy; 2025 M Jamshaid. All rights reserved.
-        </Copyright>
-
-      </FooterWrapper>
-    </FooterContainer>
+        <Icons>
+          {socials.map(([url, IconComp, label]) => (
+            <Icon key={label} href={url} target="_blank" rel="noreferrer" aria-label={label} onPointerDown={spawnRipple}><IconComp /></Icon>
+          ))}
+          <Icon href="#about" aria-label="Back to top" onPointerDown={spawnRipple}><FiArrowUp /></Icon>
+        </Icons>
+        <Copy>&copy; {new Date().getFullYear()} {Bio.name}. All rights reserved.</Copy>
+      </Inner>
+    </Wrap>
   );
 }
 

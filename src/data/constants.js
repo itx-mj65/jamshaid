@@ -1,5 +1,5 @@
 export const Bio = {
-  name: "M jamshaid",
+  name: "M Jamshaid",
   roles: ["Full Stack Developer", "MERN Stack Developer", "Programmer"],
   description:
     "I am a dedicated and adaptable professional passionate about learning and growth. I thrive on challenges, delivering high-quality results, and creating impactful solutions with a focus on innovation and continuous improvement.",
@@ -8,7 +8,7 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/m-jamshaid-48178828b/",
   twitter: "#",
   insta: "https://www.instagram.com/jamshaidweb/?igsh=MWt2a2ZsaW4wcnEyeA%3D%3D",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  facebook: "",
 };
 
 export const skills = [
@@ -54,6 +54,8 @@ export const skills = [
         image:
           "https://res.cloudinary.com/dutqyxxou/image/upload/v1752921168/tailwind_logo-removebg-preview_dykxzn.png",
       },
+      { name: "Three.js" },
+      { name: "GSAP" },
     ],
   },
   {
@@ -84,6 +86,10 @@ export const skills = [
         name: "Firebase",
         image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
       },
+      { name: "PostgreSQL" },
+      { name: "Prisma" },
+      { name: "Drizzle ORM" },
+      { name: "Payload CMS" },
     ],
   },
 
@@ -116,6 +122,9 @@ export const skills = [
         image:
           "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
       },
+      { name: "Vercel" },
+      { name: "Stripe" },
+      { name: "Cloudinary" },
     ],
   },
 ];
@@ -230,6 +239,221 @@ export const education = [
 
 export const projects = [
   {
+    id: 6,
+    title: "Medbilling RCM",
+    date: "Live - Ongoing",
+    description: `Marketing website for Medbilling RCM, a US medical billing and revenue cycle management company serving physician groups, hospitals, and ambulatory surgery centers. Built on Next.js 16 with Payload CMS and fully SEO-optimized.
+
+Scope: 50+ pages, including the homepage, 10 service pages, 32 specialty-billing pages (radiology, cardiology, oncology and more), blog, case studies, team, and contact. Each page has its own hero, conversion CTAs, and SEO schema.
+
+Design system: custom brand tokens (navy, green and gold palette with Poppins and Montserrat type), a reusable component library (hero, process, testimonials, CTA sections), and a scroll-reveal animation system, built to strict visual accuracy against the brand guidelines.
+
+Lead pipeline: free-assessment forms submit through a Payload-backed API that stores leads and triggers team email notifications in real time through Resend.
+
+My role: full build-out and ongoing iteration. I converted the source designs into pixel-accurate Next.js pages, built the shared component and CSS architecture, wired the CMS and lead pipeline, and run the Git and Vercel deployment workflow end to end (branch, PR, preview, production).`,
+    image: "/projects/medbilling-cover.jpg",
+    images: [
+      { src: "/projects/medbilling-ar-recovery.jpg", caption: "Service page - AR Recovery" },
+      { src: "/projects/medbilling-radiology.jpg", caption: "Specialty page - Radiology Billing" },
+    ],
+    tags: ["Next.js 16", "React 19", "Payload CMS", "Resend", "Vercel", "SEO", "CI/CD"],
+    category: "web app",
+    webapp: "https://www.medbillingrcm.com/",
+  },
+  {
+    id: 8,
+    title: "Medbilling EMS",
+    date: "Live in Production",
+    description: `Employee Management System for Med Billing RCM: a role-based web portal the company uses to run its daily workforce operations, covering attendance and breaks, leave, tasks with approval and time tracking, daily reports, performance, holidays and announcements. Four roles use it (Admin, Manager, Team Lead and Employee), each with its own navigation, pages and data scope.
+
+Key modules:
+- Attendance: check in and out, one lunch and unlimited short breaks with per-department slot and duration limits, a live "worked today" timer, and automatic check-out at shift end for anyone who forgets. Admins get a live Today view, a monthly breakdown (Present, Late, Leave, Holiday, Absent) and Excel export.
+- Tasks: list and board views with priorities, deadlines and comments. The lifecycle runs assigned, accepted, submitted, then approved, returned or rejected, with a timer that tracks productive time and an approval chain with remarks.
+- Leaves and holidays: six leave types with half-day support, overlap and weekend validation, admin approval, and a holiday calendar with bulk Excel import that feeds the attendance rules.
+- Daily reports and performance: end-of-day reports with reviewer feedback, and a monthly score built from task completion, on-time rate and attendance.
+- Analytics and dashboards: role-aware stat cards and Recharts bar, line and pie charts.
+- People and communication: employee and department management, rich-text announcements, in-app notifications, light and dark themes, and a responsive layout.
+
+Technical highlights: Next.js 16 App Router with route handlers as the API, MongoDB Atlas with Mongoose, TanStack React Query on the client, JWT auth in an HTTP cookie with roles enforced in middleware and again in every API route, email one-time codes for sign-up and password reset through Nodemailer, and timezone-aware work-day logic with dayjs. Deployed on Vercel with automatic deploys from GitHub.
+
+The portal is for company staff, so the live link opens the sign-in page. All screenshots use fictional demo data.`,
+    image: "/projects/ems-cover.jpg",
+    images: [
+      { src: "/projects/ems-attendance-monthly.jpg", caption: "Admin - monthly attendance breakdown with Late and Leave statuses" },
+      { src: "/projects/ems-employee-attendance.jpg", caption: "Employee - attendance screen with live timer and breaks" },
+      { src: "/projects/ems-tasks.jpg", caption: "Tasks - grouped list view" },
+      { src: "/projects/ems-leaves.jpg", caption: "Leave management" },
+      { src: "/projects/ems-holidays.jpg", caption: "Holiday calendar" },
+    ],
+    tags: ["Next.js 16", "React 19", "MongoDB", "Mongoose", "Tailwind CSS", "React Query", "JWT Auth", "Recharts", "Vercel"],
+    category: "web app",
+    webapp: "https://ems.medbillingrcm.com",
+  },
+  {
+    id: 9,
+    title: "EnrollMD",
+    date: "Live in Production",
+    description: `Medical credentialing website and headless CMS for EnrollMD, a US company that helps healthcare providers get credentialed and enrolled with insurance payers. The client had a finished static HTML/CSS design and needed a production site that was fast, SEO-ready and manageable by a non-technical team. I rebuilt it as a pixel-perfect Next.js 15 application and co-located a secured Payload CMS admin, so the team publishes articles and works inbound leads without a separate backend.
+
+What I built:
+- Pixel-perfect HTML to Next.js migration: modular components, CSS Modules, next/font and next/image for zero layout shift, with static generation for every marketing page including the Services mega menu, Pricing, Process and "Who We Help" pages.
+- Lead capture pipeline: "Free Credentialing Audit" forms post to a serverless API protected by Cloudflare Turnstile, a honeypot field, database-backed rate limiting and strict input validation. Submissions land in the admin's lead inbox with status tracking (New, Contacted, In Progress, Completed).
+- Headless CMS (Payload 3): branded admin UI with role-based access (admin and editor), Posts, Categories, Media and Users collections, and custom React admin components such as a slug field with live URL preview.
+- Security hardening: locked-down registration and password-reset routes, CSRF/CORS origin allow-list, a strong password policy, blocked SVG uploads and link sanitising in rich-text rendering.
+- Media pipeline: a custom Cloudinary storage adapter for Payload with server-side resize, auto-format CDN delivery and responsive thumbnail, card and hero sizes.
+- SEO and performance: semantic HTML, per-page metadata and OpenGraph, Article/Blog JSON-LD, a dynamic sitemap, and ISR with on-demand revalidation on publish.
+- Database and deployment: Neon Postgres with versioned migrations that run at build time, deployed on Vercel with preview and production separation.
+
+Outcome: a fully static, fast public site with a secured content and lead-management back office that the EnrollMD team runs themselves. New blog posts go live within seconds of publishing, and every audit request appears in one inbox with a clear follow-up status.
+
+Admin screenshots are from a local build with demo data; no real client information is shown.`,
+    image: "/projects/enrollmd-cover.jpg",
+    images: [
+      { src: "/projects/enrollmd-services-menu.jpg", caption: "Services mega menu" },
+      { src: "/projects/enrollmd-audit-form.jpg", caption: "Free Credentialing Audit form (Turnstile-protected lead capture)" },
+      { src: "/projects/enrollmd-blog.jpg", caption: "Blog listing with category filter" },
+      { src: "/projects/enrollmd-blog-post.jpg", caption: "Blog post page (ISR, JSON-LD, OpenGraph)" },
+      { src: "/projects/enrollmd-admin-dashboard.jpg", caption: "Admin - custom dashboard with lead and content counts" },
+      { src: "/projects/enrollmd-lead-inbox.jpg", caption: "Admin - audit submissions inbox with status pills" },
+      { src: "/projects/enrollmd-post-editor.jpg", caption: "Admin - post editor with slug field, categories and publish status" },
+    ],
+    tags: ["Next.js 15", "React 19", "Payload CMS 3", "Neon Postgres", "Cloudinary", "Cloudflare Turnstile", "CSS Modules", "Vercel"],
+    category: "web app",
+    webapp: "https://www.enrollmd.com",
+  },
+  {
+    id: 10,
+    title: "Billdontix",
+    date: "Live in Production",
+    description: `Dental billing marketing website with a built-in lead inbox and blog CMS. Billdontix is a dental billing and claims-recovery company; the site is built for dental practice owners who want to see where revenue is leaking, and for the Billdontix team who answer them. I designed and built the whole product: nineteen service, specialty, software and state pages, a free-audit lead form, a blog, and one secure admin where leads, articles and page titles are managed.
+
+The client needed a site that ranks for dental billing searches and turns visitors into audit requests, without a developer for every text change. I built one Next.js application where public pages are cached and fast, the audit form saves leads into Postgres behind several spam and abuse checks, and a single admin inside Payload CMS handles leads, blog posts, media and SEO settings.
+
+What I built:
+- Multi-page site system: nineteen pages driven by typed content modules and shared section components, each with canonical tags, JSON-LD structured data, an XML sitemap and robots rules.
+- Free-audit lead form: a Server Action with useActionState validates every field on the server, rejects a hidden honeypot field and too-fast submissions, and applies database-backed rate limits.
+- Unified admin: dashboard, leads, blog, media, SEO and account screens inside one Payload shell with client-side navigation.
+- Lead management: a status workflow (new, contacted, won, lost, spam), inline status changes, CSV download, and a dashboard count of leads that still need a reply.
+- Blog CMS: posts and categories with drafts, version history and a Lexical editor supporting tables, check lists, captioned images and insertable callout, call-to-action, YouTube, code and FAQ blocks.
+- Blog front end: live search, a scrollable category row and numbered pagination, with article bodies rendered as React elements rather than raw HTML.
+- Image storage: Cloudinary uploads through a storage adapter, with crops and sizes produced from the image URL and served through next/image.
+- SEO editor: each page's Google title and description can be overridden from the admin with a live Google-style preview.
+- On-demand caching: publishing, editing or deleting content revalidates the blog index, category pages, the article and the sitemap.
+
+Security and performance: a signed HttpOnly session cookie verified by a custom Payload auth strategy, Origin checks on state-changing requests, rate-limited login and lead form, security headers, Server Components by default, and static plus on-demand rendering for public pages.
+
+Outcome: audit requests arrive in a protected inbox the team can work through and export, and the team publishes blog posts, replaces images and adjusts Google titles on their own, with changes live the moment they are saved.`,
+    image: "/projects/billdontix-cover.jpg",
+    images: [
+      { src: "/projects/billdontix-home-stats.jpg", caption: "Homepage below the hero: the revenue-loss message and key figures" },
+      { src: "/projects/billdontix-audit-form.jpg", caption: "Free-audit page with the lead form that saves requests into the admin inbox" },
+      { src: "/projects/billdontix-small-practice.jpg", caption: "Service page: small-practice dental billing" },
+      { src: "/projects/billdontix-orthodontic.jpg", caption: "Specialty page: orthodontic billing services" },
+    ],
+    tags: ["Next.js 16", "React 19", "Payload CMS 3", "PostgreSQL (Neon)", "Lexical", "Cloudinary", "Vercel", "SEO"],
+    category: "web app",
+    webapp: "https://billdontix.com",
+  },
+  {
+    id: 11,
+    title: "SimpleScheduleMD",
+    date: "Live in Production",
+    description: `Multi-doctor appointment scheduling and patient portal for medical practices that see patients across several U.S. time zones. Patients book from a secure link, choose the service they need and see the free times in their own time zone, while staff manage every doctor's calendar, patients and services from a protected back office. I designed, built, tested and deployed the whole product.
+
+A practice needs patients to book the right kind of visit without phone tag, and needs staff to keep several doctors' calendars, visit lengths and patient lists apart. In the booking portal the patient first says who they are, where they are (the ZIP code sets their time zone) and which service they need; the available times then adjust to that service's length and are shown in both the patient's and the doctor's time zone.
+
+What I built:
+- Time-zone-aware booking: every slot is stored as an instant and shown in both the patient's and the doctor's IANA zone, with daylight-saving changes handled by the platform date libraries rather than fixed offsets.
+- Services with visit lengths: each doctor has their own services, the chosen service decides the visit length, and the free-time grid is recomputed for that length.
+- Multi-doctor model: schedules, services, booking links and patient lists are scoped to the selected doctor, and the selection is re-validated on the server for every request.
+- Race-safe slot booking: the slot check and the insert run in one database transaction with an idempotency key, so two people cannot take the same time and a double click cannot create two appointments.
+- Staff security: password plus authenticator-app code (TOTP), emailed one-time password reset, role-based permissions, CSRF protection, rate limiting and an audit log of sensitive actions.
+- Booking links and patient portal: tokenised booking links, and patients can confirm, cancel or reschedule from a private manage link or a signed-in portal.
+- Email confirmations and reminders: messages go to a database outbox in the same transaction as the booking and are sent by a worker with retries, back-off and a dead-letter state.
+- Payments switch: Stripe checkout is built and tested in test mode behind a single environment switch, ready to turn on without code changes.
+- Built for thousands of patients: trigram indexes for patient search, paged and filtered lists, short-lived caches and Server-Timing headers keep the staff screens fast.
+
+Outcome: patients can book, change or cancel a visit in a few steps, and staff run several doctors from one workspace without one doctor's data leaking into another's. The release is backed by 325 automated unit, integration and security tests and 54 end-to-end browser tests.
+
+Every back-office screenshot shows demo data (sample provider and sample patients); no real patient information appears.`,
+    image: "/projects/ssmd-cover.jpg",
+    images: [
+      { src: "/projects/ssmd-booking.jpg", caption: "Booking page: slots fit the service's length and show both time zones" },
+      { src: "/projects/ssmd-calendar.jpg", caption: "Staff - calendar view with the doctor's time zone shown" },
+      { src: "/projects/ssmd-appointments.jpg", caption: "Staff - appointments list with filters, visit length and actions" },
+      { src: "/projects/ssmd-patients.jpg", caption: "Staff - patients list: searchable, filterable and paged" },
+      { src: "/projects/ssmd-services.jpg", caption: "Staff - services for one doctor, each with the time it occupies" },
+      { src: "/projects/ssmd-booking-links.jpg", caption: "Staff - booking links that staff create and can disable" },
+      { src: "/projects/ssmd-settings.jpg", caption: "Staff - practice settings and weekly hours" },
+      { src: "/projects/ssmd-admin.jpg", caption: "Administration area: doctors, staff accounts and access" },
+    ],
+    tags: ["Next.js 16", "React 19", "Prisma 6", "PostgreSQL (Neon)", "Zod", "Stripe", "Nodemailer", "Vitest", "Playwright", "Vercel"],
+    category: "web app",
+    webapp: "https://simpleschedulemd.com",
+  },
+  {
+    id: 12,
+    title: "LeadTrack RCM",
+    date: "Live in Production",
+    description: `Lead tracking CRM for a medical billing sales team. LeadTrack RCM is a private, login-protected CRM that Medbilling RCM uses to track every sales lead from first call to signed client. It is built for three kinds of user: agents who work leads, managers who run a team, and an administrator who oversees everything. I designed and built the whole product, including the database, the role-based access, the lead history, follow-up scheduling, reporting, the admin console and the deployment.
+
+The sales team needed one shared record of every prospect: where a lead stands, who is working it, what was said on the last call, and which follow-ups are late. Each lead now has one current status, one owner and a complete timeline, every agent starts the day from a list of who to contact next, and managers see team progress without asking for updates.
+
+What I built:
+- Lead management: create, edit, search, filter and sort leads, with stage tabs that show live counts, practice details relevant to billing sales, and duplicate checks on phone numbers and emails.
+- Status pipeline with permanent history: nineteen statuses grouped into seven stages. Every call, note, meeting, status change and owner change is written to an append-only activity table in the same transaction as the lead update, then shown as a timeline.
+- Follow-up scheduling: a dedicated page sorts leads into overdue, due within 24 hours and upcoming, with a live overdue count in the navigation. Dates are stored in UTC and shown in each person's local time.
+- Role-based access: a single server-side scope rule is applied to every lead query, so agents see only their own leads and managers only their team, across lists, detail pages, reports and exports.
+- Team reporting: per-person figures for leads held, calls, meetings booked, deals won, win rate and overdue follow-ups, from SQL aggregate queries with 7, 30 and 90 day ranges.
+- CSV import and export: flexible column matching, row-by-row validation, duplicate skipping, and exports that respect filters and access scope and neutralise spreadsheet formulas.
+- Admin console and audit log: user and team management with one-time temporary passwords, forced password change at first sign-in, and a log of sign-ins, account changes, imports, exports and status changes.
+- Security and responsive interface: hashed passwords, server-side sessions in HttpOnly cookies, sign-in rate limiting, schema validation on every server action, a strict Content Security Policy, and container-query layouts where tables become labelled cards on a phone.
+
+Outcome: the sales team works from one system, with a single status, a named owner and a full record of contact for every lead, and new agents and managers can be added without exposing other teams' leads.
+
+The portal has no public pages, so the live link opens the sign-in page. Screens behind the login were captured from a development copy with demo data; no real practices or contacts are shown.`,
+    image: "/projects/leadtrack-cover.jpg",
+    images: [
+      { src: "/projects/leadtrack-dashboard.jpg", caption: "Dashboard: items that need attention, totals, leads by stage and latest activity" },
+      { src: "/projects/leadtrack-lead-history.jpg", caption: "Lead page with the update form and full history" },
+      { src: "/projects/leadtrack-pipeline.jpg", caption: "Pipeline board: every lead grouped by stage" },
+      { src: "/projects/leadtrack-follow-ups.jpg", caption: "Follow-ups: overdue, due in the next 24 hours and upcoming" },
+      { src: "/projects/leadtrack-reports.jpg", caption: "Reports: progress by team member, sources and statuses" },
+      { src: "/projects/leadtrack-users.jpg", caption: "Admin - user management with roles and teams" },
+      { src: "/projects/leadtrack-teams.jpg", caption: "Admin - teams with members, lead count and deals won" },
+    ],
+    tags: ["Next.js 16", "React 19", "Tailwind CSS 4", "PostgreSQL (Neon)", "Drizzle ORM", "Zod", "Vercel"],
+    category: "web app",
+    webapp: "https://rcm-leads-track.vercel.app",
+  },
+  {
+    id: 7,
+    title: "Choice Home Health",
+    date: "Live in Production",
+    description: `A fully custom, animation-rich single-page marketing website for Choice Home Health, a licensed home health care agency in Washington State, USA. The site is designed to turn visitors (patients, families and caregivers) into clients while reflecting the warmth, professionalism and trustworthiness of the agency.
+
+Built entirely in vanilla HTML, CSS and JavaScript with no framework and no build step: everything ships in a single self-contained file, with only CDN-loaded libraries.
+
+Highlights:
+- Three.js 3D hero: a custom rotating glass medical cross with lighting and depth that adapts to window resize.
+- GSAP ScrollTrigger entrance animations tailored to every section, animated number counters, and Lenis smooth scrolling.
+- An ECG/heartbeat SVG divider that draws itself as you scroll, driven by stroke-dashoffset.
+- Glassmorphism service cards with a 3D mouse-tilt effect written from scratch in plain JavaScript.
+- A 4-step "How It Works" timeline with progressive fill, and an insurance section covering Washington-specific programs such as WA Cares Fund and WA Apple Health (Medicaid).
+- Accessibility: skip-to-content link, ARIA labels, semantic HTML, visible focus rings, and all animations disabled under prefers-reduced-motion.
+- Mobile-first responsive layout tuned at 375px, 768px, 1200px and 1440px, deployed on Vercel with automatic CI/CD from GitHub.`,
+    image: "/projects/choice-cover.jpg",
+    images: [
+      { src: "/projects/choice-services.jpg", caption: "Services grid with glassmorphism cards" },
+      { src: "/projects/choice-how-it-works.jpg", caption: "How It Works - 4-step timeline" },
+      { src: "/projects/choice-insurance.jpg", caption: "Insurance and payment section" },
+      { src: "/projects/choice-about.jpg", caption: "About section" },
+    ],
+    tags: ["HTML5", "CSS3", "JavaScript", "GSAP", "ScrollTrigger", "Three.js", "Lenis", "Vercel"],
+    category: "web app",
+    webapp: "https://choicehealthcare1.com/",
+  },
+  {
     id: 0,
     title: "Mind Drape",
     date: "Jul 2025 - Jul 2025",
@@ -276,12 +500,6 @@ For more information, visit Mind Drape`,
         linkedin: "https://www.linkedin.com/in/m-jamshaid-48178828b/",
         github: "https://github.com/itx-mj65/",
       },
-      // {
-      //   name: "Upasana Chaudhuri",
-      //   img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-      //   linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-      //   github: "https://github.com/upasana0710",
-      // },
     ],
   },
   {
@@ -332,7 +550,6 @@ For more information, visit Mind Drape`,
 export const TimeLineData = [
   { year: 2023, text: "Started my journey" },
   { year: 2023, text: "Worked as a freelance developer" },
-  { year: 2024, text: "Founded JavaScript Mastery" },
   { year: 2025, text: "Shared my projects with the world" },
 
 ];
