@@ -130,6 +130,8 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: "/logos/medbilling-rcm.png",
+    logoBg: "#1c2260",
     role: "Website Developer",
     company: "Med Billing RCM, Faisalabad",
     date: "2026 - Present",
@@ -142,6 +144,8 @@ export const experiences = [
   },
   {
     id: 1,
+    img: "/logos/corvit.png",
+    logoBg: "#ffffff",
     role: "Website Developer (1 Year Contract)",
     company: "Corvit Systems, Faisalabad",
     date: "2025",
@@ -273,6 +277,38 @@ Admin screenshots are from a local build with demo data; no real client informat
     tags: ["Next.js 15", "React 19", "Payload CMS 3", "Neon Postgres", "Cloudinary", "Cloudflare Turnstile", "CSS Modules", "Vercel"],
     category: "web app",
     webapp: "https://www.enrollmd.com",
+  },
+  {
+    id: 13,
+    title: "Enroll MD Portal",
+    date: "Live in Production",
+    description: `HIPAA-aligned provider-credentialing and enrollment web platform for a healthcare RCM company. Enroll MD Portal replaces email-and-spreadsheet provider credentialing with a single system of record, giving the company and the medical practices it credentials with insurance payers a shared, real-time view of every case. I designed and built the full product end to end: architecture, database schema, authentication and access control, the document upload and malware scanning pipeline, and both the client and staff interfaces.
+
+Before the portal, document requests, submissions and payer-enrollment status lived in scattered inboxes, sensitive documents were hard to handle safely, and there was no audit trail. Now clients log in to see exactly what is requested and where each item stands, staff manage a full caseload with access to only the cases they own, every uploaded file is scanned for malware before anyone can download it, and every sensitive action is written to an audit log.
+
+What I built:
+- Role-based case access control: a single authorization helper checked on every one of 45+ API routes and server components, scoping staff to assigned cases and clients to their own, including nested ownership paths.
+- Mandatory MFA for internal roles: TOTP-based two-factor authentication for staff, admin and super-admin accounts, with rate-limited verification endpoints.
+- Secure document pipeline: uploads go straight to a private Google Cloud Storage bucket through short-lived signed URLs, then through an asynchronous ClamAV malware scan before a download link is ever issued.
+- Field-level encryption: sensitive text fields are encrypted at rest with AES-256-GCM and decrypted only in the one authorized staff-review path.
+- Dynamic, admin-editable document checklist: a 31-item credentialing checklist that supports file uploads and typed answers, lets admins add or retire document types without a deploy, and runs through a request, submit, review, approve status flow.
+- Status, ETA and progress visualization: payer-enrollment status, document status and staff-set ETAs feed one percent-complete model shown as matching progress bars to both clients and staff.
+- In-app messaging and audit logging: a chat thread per case, plus an append-only audit log of logins, approvals and document access by actor, action and record.
+
+Outcome: practices always know exactly what is outstanding, staff work from one caseload view instead of scattered threads, and every sensitive document and action is scanned, encrypted and logged. A full security pass came back clean across all 45+ API routes, with 286 automated tests passing before launch.
+
+The portal is login-protected, so the live link opens the sign-in page. All screenshots show synthetic demo data; no real client, provider or patient information is displayed.`,
+    image: "/projects/enrollportal-cover.jpg",
+    images: [
+      { src: "/projects/enrollportal-sign-in.jpg", caption: "Sign-in screen" },
+      { src: "/projects/enrollportal-client-case.jpg", caption: "Client case view: live document checklist with per-item status and upload" },
+      { src: "/projects/enrollportal-staff-cases.jpg", caption: "Staff case list: caseload with status, assignment and quick actions" },
+      { src: "/projects/enrollportal-staff-case-detail.jpg", caption: "Staff case detail: document checklist with approve and reject controls" },
+      { src: "/projects/enrollportal-case-chat.jpg", caption: "Case chat: messaging thread alongside live case status" },
+    ],
+    tags: ["Next.js", "Prisma", "Neon Postgres", "Auth.js", "Google Cloud Storage", "Upstash Redis", "Resend", "ClamAV", "Vercel"],
+    category: "web app",
+    webapp: "https://portal.enrollmd.com",
   },
   {
     id: 10,

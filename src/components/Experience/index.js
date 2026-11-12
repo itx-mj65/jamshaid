@@ -60,17 +60,20 @@ const Top = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 56px;
+  /* every company logo sits in the same size badge; the logo is fitted inside, never cropped */
+  width: 112px;
   height: 56px;
+  padding: 8px 12px;
   border-radius: 14px;
-  object-fit: cover;
-  background: #fff;
+  object-fit: contain;
+  background: ${({ $bg }) => $bg || '#fff'};
   flex-shrink: 0;
+  @media (max-width: 600px) { width: 84px; height: 46px; padding: 6px 8px; }
 `;
 
 
 const Initials = styled.div`
-  width: 56px;
+  width: 112px;
   height: 56px;
   border-radius: 14px;
   flex-shrink: 0;
@@ -81,6 +84,7 @@ const Initials = styled.div`
   font-weight: 700;
   color: #07080f;
   background: ${({ theme }) => theme.gradient};
+  @media (max-width: 600px) { width: 84px; height: 46px; }
 `;
 
 const initials = (name) => name.split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
@@ -167,7 +171,7 @@ const Experience = () => {
               <GlowCard>
                 <Inner>
                   <Top>
-                    {exp.img ? <Logo src={exp.img} alt="" /> : <Initials>{initials(exp.company)}</Initials>}
+                    {exp.img ? <Logo src={exp.img} alt="" $bg={exp.logoBg} /> : <Initials>{initials(exp.company)}</Initials>}
                     <div>
                       <Role>{exp.role}</Role>
                       <Company>{exp.company}</Company>
