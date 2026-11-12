@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
-import { FiGithub, FiLinkedin, FiInstagram, FiSend } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
 import { Bio } from '../../data/constants';
 import { GlowCard, Reveal, Section, SectionHeader, spawnRipple } from '../ui';
 
@@ -137,7 +137,6 @@ const Contact = () => {
               <Links>
                 <a href={Bio.github} target="_blank" rel="noreferrer"><FiGithub /> GitHub</a>
                 <a href={Bio.linkedin} target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn</a>
-                <a href={Bio.insta} target="_blank" rel="noreferrer"><FiInstagram /> Instagram</a>
               </Links>
             </Aside>
           </GlowCard>

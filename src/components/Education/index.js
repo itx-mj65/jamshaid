@@ -26,6 +26,23 @@ const Logo = styled.img`
   background: #fff;
 `;
 
+
+const Initials = styled.div`
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #07080f;
+  background: ${({ theme }) => theme.gradient};
+`;
+
+const initials = (name) => name.split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+
 const Degree = styled.h3`
   margin-top: 20px;
   font-size: 21px;
@@ -54,7 +71,7 @@ const Meta = styled.div`
     background: rgba(34, 211, 238, 0.08);
     border: 1px solid rgba(34, 211, 238, 0.25);
   }
-  span:last-child {
+  span + span {
     color: ${({ theme }) => theme.primary};
     background: rgba(139, 108, 255, 0.1);
     border-color: rgba(139, 108, 255, 0.3);
@@ -71,19 +88,19 @@ const Desc = styled.p`
 const Education = () => (
   <Section id="education">
     <SectionHeader eyebrow="Education" title="How I" accent="learned">
-      My education has been a journey of self-discovery and growth.
+      My degree and the training that got me into web development.
     </SectionHeader>
     <Grid>
       {education.map((item, i) => (
         <Reveal key={item.id} delay={i * 0.1} style={{ height: '100%' }}>
           <GlowCard tilt={8} style={{ height: '100%' }}>
             <Inner>
-              <Logo src={item.img} alt="" />
+              {item.img ? <Logo src={item.img} alt="" /> : <Initials>{initials(item.school)}</Initials>}
               <Degree>{item.degree}</Degree>
               <School>{item.school}</School>
               <Meta>
                 <span>{item.date}</span>
-                <span>Grade: {item.grade}</span>
+                {item.grade && <span>Grade: {item.grade}</span>}
               </Meta>
               <Desc>{item.desc}</Desc>
             </Inner>

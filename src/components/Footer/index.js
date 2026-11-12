@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
+import { FiFacebook, FiGithub, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
 import { Bio } from '../../data/constants';
 import { spawnRipple } from '../ui';
 
@@ -82,7 +82,6 @@ function Footer() {
   const socials = [
     [Bio.github, FiGithub, 'GitHub'],
     [Bio.linkedin, FiLinkedin, 'LinkedIn'],
-    [Bio.insta, FiInstagram, 'Instagram'],
     [Bio.facebook, FiFacebook, 'Facebook'],
     [Bio.twitter, FiTwitter, 'Twitter'],
   ].filter(([url]) => isLink(url));

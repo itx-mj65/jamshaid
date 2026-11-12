@@ -5,7 +5,7 @@ import {
   SiNodedotjs, SiExpress, SiMysql, SiMongodb, SiFirebase, SiPostgresql, SiPrisma,
   SiGit, SiGithub, SiNetlify, SiVisualstudiocode, SiPostman, SiVercel, SiStripe,
 } from 'react-icons/si';
-import { FiCloud, FiDroplet, FiLayers } from 'react-icons/fi';
+import { FiCloud, FiLayers } from 'react-icons/fi';
 import { skills } from '../../data/constants';
 import { GlowCard, Reveal, Section, SectionHeader } from '../ui';
 
@@ -28,7 +28,6 @@ const ICONS = {
   Firebase: [SiFirebase, '#ffca28'],
   PostgreSQL: [SiPostgresql, '#6aa5d8'],
   Prisma: [SiPrisma, '#ffffff'],
-  'Drizzle ORM': [FiDroplet, '#c5f74f'],
   'Payload CMS': [FiLayers, '#ffffff'],
   Git: [SiGit, '#f05032'],
   GitHub: [SiGithub, '#ffffff'],

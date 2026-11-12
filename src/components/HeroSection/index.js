@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
-import { FiArrowUpRight, FiGithub, FiLinkedin, FiInstagram, FiArrowDown } from 'react-icons/fi';
+import { FiArrowUpRight, FiGithub, FiLinkedin, FiArrowDown } from 'react-icons/fi';
 import { Bio, projects, experiences, skills } from '../../data/constants';
 import { Button, spawnRipple } from '../ui';
 import PortraitImg from '../../images/HeroCutout.webp';
@@ -337,7 +337,6 @@ const HeroSection = () => {
               <Button variant="ghost" href="#projects">View Projects</Button>
               <Social href={Bio.github} target="_blank" rel="noreferrer" aria-label="GitHub" onPointerDown={spawnRipple}><FiGithub /></Social>
               <Social href={Bio.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" onPointerDown={spawnRipple}><FiLinkedin /></Social>
-              <Social href={Bio.insta} target="_blank" rel="noreferrer" aria-label="Instagram" onPointerDown={spawnRipple}><FiInstagram /></Social>
             </Actions>
           </motion.div>
           <motion.div {...rise(0.55)}>

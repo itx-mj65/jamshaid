@@ -68,6 +68,23 @@ const Logo = styled.img`
   flex-shrink: 0;
 `;
 
+
+const Initials = styled.div`
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #07080f;
+  background: ${({ theme }) => theme.gradient};
+`;
+
+const initials = (name) => name.split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
+
 const Role = styled.h3`
   font-size: 21px;
   font-weight: 600;
@@ -109,6 +126,7 @@ const Desc = styled.p`
   margin-top: 16px;
   font-size: 15.5px;
   line-height: 1.7;
+  white-space: pre-line;
   color: ${({ theme }) => theme.text_secondary};
 `;
 
@@ -138,7 +156,7 @@ const Experience = () => {
   return (
     <Section id="experience">
       <SectionHeader eyebrow="Experience" title="Where I have" accent="worked">
-        My work as a developer and instructor across companies and projects.
+        My work as a web developer and instructor across companies and projects.
       </SectionHeader>
       <Timeline ref={ref}>
         <Rail><Fill style={{ scaleY }} /></Rail>
@@ -149,7 +167,7 @@ const Experience = () => {
               <GlowCard>
                 <Inner>
                   <Top>
-                    <Logo src={exp.img} alt="" />
+                    {exp.img ? <Logo src={exp.img} alt="" /> : <Initials>{initials(exp.company)}</Initials>}
                     <div>
                       <Role>{exp.role}</Role>
                       <Company>{exp.company}</Company>
